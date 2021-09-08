@@ -3,12 +3,13 @@ import { View, Text, ImageBackground } from 'react-native';
 import StyledButton from '../StyledButton';
 import styles from './styles';
 
-const carItem = (props) => {
+const CarItem = (props) => {
 
-    const {name, tagline, taglineCTA, image} = props;
-
-    return (
-        <View style={styles.carContainer}>
+    const {name, tagline, taglineCTA, image} = props.car;
+        console.log(props.car);
+    
+        return (
+            <View style={styles.carContainer}>
 
             <ImageBackground
                 source={image}
@@ -19,9 +20,10 @@ const carItem = (props) => {
                 <Text style={styles.title}>{name}</Text>
                 <Text style={styles.subtitle}>                    
                     {tagline}
+                    {' '}
                     <Text style={styles.subtitleCTA}>
                         {taglineCTA}
-                    </Text>               
+                    </Text>            
                 </Text>
             </View>
                 <View style={styles.buttonsContainer}>
@@ -45,4 +47,4 @@ const carItem = (props) => {
     );
 };
 
-export default carItem;
+export default CarItem;
