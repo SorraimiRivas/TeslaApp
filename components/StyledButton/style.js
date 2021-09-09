@@ -9,8 +9,7 @@ const styles = StyleSheet.create({
         height: 40,
         borderRadius: 20,
         justifyContent: 'center',
-        alignItems: 'center',
-        
+        alignItems: 'center',        
     },
     text: {
         fontSize: 12,
